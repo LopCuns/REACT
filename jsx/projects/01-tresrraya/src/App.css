@@ -1,0 +1,66 @@
+*,::after,::before {
+  box-sizing: border-box;
+}
+.app{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+.app-board{
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1rem;
+}
+
+.app-boardCell,.app-isTurn{
+  --cellSize : max(5vw,5rem);
+  width: var(--cellSize);
+  height: var(--cellSize);
+  display: grid;
+  place-items: center;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.app-boardCellContent,.app-isTurnContent,.app-modalWinnerTurn {
+  font-size: max(3vw,3rem);
+  font-family: monospace;
+}
+.app-turn {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content:center;
+  gap:5rem;
+  margin-top: 3rem;
+}
+.app-isTurn.its {
+  background-color: #78e5f8;
+}
+
+.app-modalWinner {
+  display:grid;
+  place-items: center;
+  position: absolute;
+  width: 20rem;
+  padding:1rem;
+  border-radius: 15px;
+  background-color: #333;
+  font-size: 2rem;
+  text-align: center;
+}
+.app-modalWinnerTurn {
+  display:grid;
+  place-items:center;
+  width: 7rem;
+  height:7rem;
+  margin:0;
+  border: 1px solid #fff;
+  text-align: center
+
+}
+
+.app-restart{
+  margin-top: 3rem;
+  padding: 1rem 2rem;
+}

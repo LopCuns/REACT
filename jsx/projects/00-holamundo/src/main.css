@@ -1,0 +1,13 @@
+body {
+  width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  background-color: #222;
+}
+.App {
+  display:flex;
+  flex-flow: column wrap;
+  gap: 1rem;
+}
