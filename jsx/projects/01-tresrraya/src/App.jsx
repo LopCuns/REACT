@@ -57,7 +57,8 @@ function App() {
     if (board[idx] || winner) return
     // Hacer las modificaciones en el tablero
     newBoard[idx] = turn === TURNS.X?TURNS.X:TURNS.O
-
+    // Cambiar el tablero
+    setBoard(newBoard)
     // Comprobar si alguien ha ganado la partida
     const winValue = checkWinning(newBoard)
     if (winValue){
